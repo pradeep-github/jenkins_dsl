@@ -4,24 +4,15 @@ Class s1Common = new GroovyClassLoader(getClass().getClassLoader()).parseClass(c
 def viewName = "Seed Jobs"
 def jobFilter = "s1-"
 def DSLs = [
-        "s1m-seed":
+        "component-seed":
                 [
-                    'path': 'jobs/s1m/jobs.groovy',
+                    'path': 'jobs/component/jobs.groovy',
                     'url': 'git@git.sami.int.thomsonreuters.com:VenkataPradeep.Karuturi/jenkins_dsl.git',
                     'branch': 'master',
                     'credential': s1Common.sami_git_crednetial_id
                 ]
          ,
-         "s1a-seed":
-	        [
-		    'path': 'jobs/s1a/jobs.groovy',
-		    'url': 'git@git.sami.int.thomsonreuters.com:VenkataPradeep.Karuturi/jenkins_dsl.git',
-		    'branch': 'master',
-                    'credential': s1Common.sami_git_crednetial_id
-
-                ]
-        
-          ,
+         
           "ws-seed":
 		[
 		    'path': 'jobs/ws/jobs.groovy',
